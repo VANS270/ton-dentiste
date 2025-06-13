@@ -1,0 +1,296 @@
+body
+{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+header
+{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+nav
+{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    & :first-child
+    {
+        color: rgb(254, 116, 24);
+    }
+    & > a 
+    {
+        &:hover
+        {
+        color: rgb(254, 116, 24);
+        }
+    }
+}
+.nav2
+{
+    display: none;
+}
+a
+{
+    text-decoration: none;
+    color:black;
+    font-size: large;
+}
+.image-defilante
+/* je fais defiler des images automaquement */
+{
+    width: 100vw;
+    
+    overflow-x: scroll;
+    
+}
+.slide
+{
+ display:flex;
+ height: 500px;
+ width: 400%;
+ animation: slide 10s ease-in-out 600ms infinite normal;
+ 
+}
+@keyframes slide
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    20%
+    {
+        transform: translateX(-100vw);
+        
+    }
+    40%
+    {
+        transform: translateX(-200vw);
+        
+    }
+    80%
+    {
+        transform: translateX(-300vw);
+        
+    }
+    100%
+    {
+        transform: translateX(0);
+        
+    }
+}
+.bloc
+{
+    text-align: center;
+    width: 60%;
+    padding-bottom: 20px;
+    margin-left: 20%;
+    margin-bottom: 80px;
+    border-bottom: 1px rgba(0, 0, 0, 0.219) dashed;
+}
+h1
+{
+        color: rgb(254, 116, 24);
+}
+hr
+{
+    background-color: rgb(254, 116, 24);
+    width: 8%;
+    height: 2px;
+    border: none;
+    margin-bottom: 60px;
+}
+.video
+{
+    display: block;
+    box-sizing: border-box;
+    width: 400px;
+    box-shadow: 4px 1px 27px 1px rgba(0,0,0,0.78);;
+
+
+}
+
+.text_video
+{
+    width: inherit;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 30px;
+    background-color: white;
+    & > a
+    {
+        color: rgb(254, 116, 24); 
+    }
+
+}
+.appli-dig
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 80px;
+}
+.contactez-nous
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 19%;
+    margin-top: 120px ;
+    background: url(image/floute.jpg);
+    background-size: cover;
+    height: 190px;
+    width: 100%;
+    font-size: large;
+    
+    & > a
+    {
+        color: rgb(254, 116, 24);
+        padding: 10px;
+        font-size: larger;
+        border-radius: 8px;
+        background-color: rgb(14, 13, 13);
+        height: 25px;
+        &:hover
+        {background-color: rgba(0, 0, 0, 0);
+            
+        }
+    }
+    
+}
+.TEMOIGNAGES
+{
+    text-align: center;
+    & > a 
+    {
+        color: rgb(254, 116, 24);
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        border-radius: 12px  ;
+        border: 1px solid rgb(254, 116, 24);
+    }
+}
+.tem_client
+{
+    & > div 
+    {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 40px;
+    }
+}
+.partenaire
+{
+    margin-top: 50px;
+    padding-bottom: 70px;
+    & > div:not(.mutuel)
+    {
+      background:   radial-gradient(0.7em at 75% 100%,#0000 98%,#000) 50% calc(100% - 0.7em)/2.8em 100% repeat-x,
+      radial-gradient(0.7em at 25% 50%,#000 99%,#0000 101%) bottom/2.8em 1.4em repeat-x;
+      color:rgb(254, 116, 24);
+      height: 222px;
+      font-size: 30px;
+      text-align: center;
+      padding: 50px;
+      box-sizing: border-box;
+    }
+    & > .mutuel
+    {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+        margin-top: 20px;
+       
+    }
+    
+}
+footer
+{
+    background-color: rgb(10, 25, 79);
+    font-family: 'Roboto' , sans-serif;
+    color: white;
+    & > section
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+}
+.info
+{
+    & > div
+    {
+       line-height: 1.8;
+       display: flex;
+       flex-direction: column;
+       font-size: medium;
+       padding-bottom: 15px;
+       & > a 
+       {
+        color: white;
+        font-size: large;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        &:hover:not(.link)
+        {
+            color: rgb(254, 116, 24);
+        }
+        
+       }
+    }
+}
+.link
+{
+   padding: 10px;
+   margin-bottom: 5px;
+   border-radius: 16px  ;
+   border: 1.3px solid rgba(254, 116, 24, 0.854);
+   &:hover 
+   {
+     background-color: rgb(254, 116, 24);
+   }
+}
+.legalisation
+{
+    background-color: rgb(4, 79, 79);
+    padding: 50px;
+    & > div
+    {
+       gap: 20px;
+    }
+}
+.rdv
+{
+    padding: 17px;
+    border-radius: 16px;
+    background-color: rgb(7, 153, 244);
+    color: white;
+    position: fixed;
+    bottom: 8px;
+    right: 9px;
+    display: inline-block;
+}
+@media only screen  and (max-width:450px)
+{
+  
+}
