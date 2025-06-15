@@ -1,3 +1,4 @@
+
 body
 {
   font-family: "Montserrat", sans-serif;
@@ -49,43 +50,33 @@ a
 /* je fais defiler des images automaquement */
 {
     width: 100vw;
-    
-    overflow-x: scroll;
+   flex-shrink: 0;
     
 }
 .slide
 {
  display:flex;
- height: 500px;
+ overflow: hidden; 
+ max-height: 600px;
  width: 400%;
- animation: slide 10s ease-in-out 600ms infinite normal;
+ gap: 50px;
+ gap: var(--gap);
+ animation: slide 25s linear  1  ;
+ &:hover
+ {
+    animation-play-state: paused;
+ }
  
 }
 @keyframes slide
 {
     0%
     {
-        transform: translateX(0);
-    }
-    20%
-    {
-        transform: translateX(-100vw);
-        
-    }
-    40%
-    {
-        transform: translateX(-200vw);
-        
-    }
-    80%
-    {
-        transform: translateX(-300vw);
-        
+        transform: translateX(0) scaleY(0.7) ;
     }
     100%
     {
-        transform: translateX(0);
-        
+        transform: translateX(-400vw)  scaleY(0.7); 
     }
 }
 .bloc
@@ -152,6 +143,7 @@ hr
     background-size: cover;
     height: 190px;
     width: 100%;
+    box-sizing: border-box;
     font-size: large;
     
     & > a
@@ -215,7 +207,7 @@ hr
         justify-content: center;
         display: flex;
         flex-direction: row;
-        gap: 40px;
+        gap: 2rem   ;
         align-items: center;
         margin-top: 20px;
        
@@ -264,6 +256,9 @@ footer
    padding: 10px;
    margin-bottom: 5px;
    border-radius: 16px  ;
+   display: flex;
+   gap: 9px;
+   align-items: center;
    border: 1.3px solid rgba(254, 116, 24, 0.854);
    &:hover 
    {
@@ -277,6 +272,8 @@ footer
     & > div
     {
        gap: 20px;
+       display: flex;
+       flex-direction: row;
     }
 }
 .rdv
@@ -292,5 +289,144 @@ footer
 }
 @media only screen  and (max-width:450px)
 {
+    *
+    {
+        font-size: 30px;
+    }
+  nav
+  {
+    display: none;
+  }
+  .nav2
+  {
+    display: block;
+  }
+  .image-defilante
+  {
+    display: none;
+
+  }
+  .bloc
+  {
+    display: block;
+    margin-top: 150px;
+    margin-left: 40%;
+    width: 80%;
+    border-bottom: 3px rgba(0, 0, 0, 0.237) dashed;
+    & > h1 
+    {
+        font-size: 34px;
+    }
+  }
+  .appli-dig
+  {
+    flex-direction: column;
+    row-gap: 80px;
+    margin-left: 25%;
+    
+  }
+  .contactez-nous
+  {
+  width: 900px;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-size: none;
+  flex-direction: column;
+  font-size: 20px;
+  color: rgb(254, 116, 24);
+  }
+  .TEMOIGNAGES
+  {
+    & > div
+    {
+        margin-left: 50%;
+        flex-wrap: wrap;
+        font-size: 20px;
+        line-height: 1.5;
+        
+    }
+    &> a 
+    {
+        margin-left: 50%;
+        white-space: nowrap;
+    }
+  }
+  .partenaire
+  {
+    width: 900px;
+  }
+  .mutuel
+  {
+    animation: coul 10s linear infinite;
+  }
+  footer
+  {
+    width: 30em;
+     & > section
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 1.3em;
+        
+    }
+  }
+  .info div a
+  {
+    font-size: 30px;
+  }
+  .link
+  {
+    font-size: larger;
+    padding: .8rem;
+    padding-left: 4rem;
+    font-size: 6.5rem;
+    gap:5px;
+    & > svg
+    {
+        width: 1.3em;
+        height: 1.3rem;
+    }
+    & > span 
+    {
+        font-size: 1.3em;
+    }
+  }
+  .rdv
+  {
+    font-size: 27px;
+    bottom: .9em;
+    right: 1.3em;
+  }
+  .vid
+  {
+    width: 500px;
+    & > img 
+    {
+        width: 500px;
+    }
+  }
+  .video
+  {
+    width: 500px;
+  }
+  .legalisation
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &> div
+    {
+        
+    }
+  }
   
+}
+@keyframes coul
+{
+    100%
+    {
+        transform: translateX(-100%);
+    }
 }
